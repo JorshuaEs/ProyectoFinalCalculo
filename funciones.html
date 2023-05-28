@@ -16,50 +16,52 @@
 
     <body>
         <main>
-        <header>
+            <header>
             
-            <nav id="header" class="fixed w-full z-10 top-0 ">
-                <img class="absolute h-4/5  pl-10 mt-2" src="imagenes/umgimg.png">
+                <nav id="header" class="fixed w-full z-10 top-0 ">
+                    <div class="max-[1100px]:hidden">
+                    <img class="absolute h-4/5  pl-10 mt-2 " src="imagenes/umgimg.png">
+                    </div>
+                    <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
             
-                <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
-        
-                <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
-        
-                    <div >
-                        <a id="title" class=" text-black text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="index.html">
-                            PROYECTO CÁLCULO I
-                        </a>
+                    <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+            
+                        <div >
+                            <a id="title" class=" text-black text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="index.html">
+                                PROYECTO CÁLCULO I
+                            </a>
+                        </div>
+            
+                        <div class="block lg:hidden pr-4">
+                            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+                                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Menu</title>
+                                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                                </svg>
+                            </button>
+                        </div>
+            
+                        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  md:bg-transparent z-20" id="nav-content">
+                            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                                <li >
+                                    <a id="inicio"class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" href="index.html">Inicio</a>
+                                </li>
+                                <li>
+                                    <a id="contenido"class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-2" href="funciones.html">FUNCIONES</a>
+                                </li>
+                                <li>
+                                    <a id="contenido2" class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-2" href="derivadas.html">DERIVADAS</a>
+                                </li>
+                                <li >
+                                    <a id="contenido3" class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2" href="integrantes.html">INTEGRANTES</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-        
-                    <div class="block lg:hidden pr-4">
-                        <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
-                            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>Menu</title>
-                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                            </svg>
-                        </button>
-                    </div>
-        
-                    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
-                        <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                            <li class="mr-3">
-                                <a id="inicio"class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="index.html">Inicio</a>
-                            </li>
-                            <li class="mr-3">
-                                <a id="contenido"class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="funciones.html">FUNCIONES</a>
-                            </li>
-                            <li class="mr-3">
-                                <a id="contenido2" class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="derivadas.html">DERIVADAS</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-            <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+                </nav>
+            </header>
+            <body class="font-sans leading-normal tracking-normal">
 
-                
-            
                 <!--Container-->
                 <div class="container w-full md:max-w-3xl mx-auto pt-20">
             
@@ -67,38 +69,191 @@
             
                         <!--Title-->
                         <div class="font-sans">
-                            <p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="#" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO INICIO</a></p>
+                            <p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="index.html" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO INICIO</a></p>
                                     <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Funciones y sus Gráficas</h1>
                                     <p class="text-sm md:text-base font-normal text-gray-600">Publicado 24 Mayo 2023</p>
                         </div>
             
             
                         <!--Post Content-->
-            
-            
-                        <!--Lead Para-->
-                        <p class="py-6">
-                            👋 Welcome fellow <a class="text-green-500 no-underline hover:underline" href="https://www.tailwindcss.com">Tailwind CSS</a> and miminal monochrome blog fan. This starter template provides a starting point to create your own minimal monochrome blog using Tailwind CSS and vanilla Javascript.
+                        <p class="py-6">    
+                        Una <span class="text-green-500 ">función</span> f es una regla que establece una relación entre cada elemento x en un conjunto, llamado <span class="text-green-500 ">dominio</span>, y un único valor f(x) en otro conjunto. El conjunto que se forma con todos los valores obtenidos de esta manera se conoce como el <span class="text-green-500 ">rango</span> de la función.
                         </p>
+
+                        <div class="flex justify-center">
+                        <img class="mr-12"src="/imagenes/Diagramafuncion.png" alt="Diagrama de una función">
+                        <img src="/imagenes/diagramalinea.png" alt="Diagrama de una función">
+                        </div>
+
+                        <p class="py-6">
+                        En las matemáticas elementales uno se encuentra con varios objetos designada por el término función: la función logarítmica, la función trigonométrica, la función exponencial. que tienen estos en común es que para cualquier número x la función toma un valor definido, a saber, log(x), sin(x), cos(x), tan(x), e<sup>x</sup>, etc. También se aprende a dibujar gráficas que representan funciones, trazando el valor de la función en X frente al valor de Y.</p>
             
-                        <p class="py-6">The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components.</p>
             
+                        <div class="flex justify-center">
+                            <img class="mr-12"src="/imagenes/cuatrofunciones.png" alt="Diagrama de una función">
+                            </div>
             
-                        <h1 class="py-2 font-sans">Heading 1</h1>
-                        <h2 class="py-2 font-sans">Heading 2</h2>
-                        <h3 class="py-2 font-sans">Heading 3</h3>
-                        <h4 class="py-2 font-sans">Heading 4</h4>
-                        <h5 class="py-2 font-sans">Heading 5</h5>
-                        <h6 class="py-2 font-sans">Heading 6</h6>
+                        <p class="py-6">Una sola letra como f (o g o F) se utiliza para nombrar una
+                            función. Entonces f(x), que se lee “f de x” o “f en x”, denota el valor que f asigna a x.
+                            Por lo tanto, puede definirse con diferentes formulas como: y = x<sup>2</sup>, y =&#8730;x o y =|x| .
+                        </p> 
             
-                        <p class="py-6">Sed dignissim lectus ut tincidunt vulputate. Fusce tincidunt lacus purus, in mattis tortor sollicitudin pretium. Phasellus at diam posuere, scelerisque nisl sit amet, tincidunt urna. Cras nisi diam, pulvinar ut molestie eget, eleifend ac magna. Sed at lorem condimentum, dignissim lorem eu, blandit massa. Phasellus eleifend turpis vel erat bibendum scelerisque. Maecenas id risus dictum, rhoncus odio vitae, maximus purus. Etiam efficitur dolor in dolor molestie ornare. Aenean pulvinar diam nec neque tincidunt, vitae molestie quam fermentum. Donec ac pretium diam. Suspendisse sed odio risus. Nunc nec luctus nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec nulla eget sem dictum elementum.</p>
-            
-                        <ol>
-                            <li class="py-3">Maecenas accumsan lacus sit amet elementum porta. Aliquam eu libero lectus. Fusce vehicula dictum mi. In non dolor at sem ullamcorper venenatis ut sed dui. Ut ut est quam. Suspendisse quam quam, commodo sit amet placerat in, interdum a ipsum. Morbi sit amet tellus scelerisque tortor semper posuere.</li>
-                            <li class="py-3">Morbi varius posuere blandit. Praesent gravida bibendum neque eget commodo. Duis auctor ornare mauris, eu accumsan odio viverra in. Proin sagittis maximus pharetra. Nullam lorem mauris, faucibus ut odio tempus, ultrices aliquet ex. Nam id quam eget ipsum luctus hendrerit. Ut eros magna, eleifend ac ornare vulputate, pretium nec felis.</li>
-                            <li class="py-3">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc vitae pretium elit. Cras leo mauris, tristique in risus ac, tristique rutrum velit. Mauris accumsan tempor felis vitae gravida. Cras egestas convallis malesuada. Etiam ac ante id tortor vulputate pretium. Maecenas vel sapien suscipit, elementum odio et, consequat tellus.</li>
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Clases de funciones</h2>
+
+                            <ol>
+                                <li class="py-1"><span class="text-green-500 font-bold">Inyectiva:</span> Tiene una relación de conjuntos de 1 a 1</li>
+                                <li class="py-1"><span class="text-green-500 font-bold">Sobreyectiva:</span> Tiene una relación de conjuntos de 2 a 1</li>
+                                <li class="py-1"><span class="text-green-500 font-bold">Biyectiva:</span> Tiene presente la clase Inyectica y sobreyectiva</li>
+
+                            </ol>
+
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Tipos de funciones</h2>
+                        
+                        <ol class="list-disc">
+                            <li class="py-1">Lineal</li>
+                            <li class="py-1">Cuadrática</li>
+                            <li class="py-1">Cúbica</li>
+                            <li class="py-1">Polinómica</li>
+
                         </ol>
-            
+
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Propiedades de las funciones</h2>
+
+                            <ol>
+                                <li class="py-3"><span class="text-green-500 font-bold">Continuidad:</span> Cuando una función y=f(x) puede ser representada en su totalidad en el dominio mediante un trazo continuo, se considera una función continua. En otras palabras, si es posible dibujar la gráfica de la función sin interrupciones, sin tener que levantar el lápiz, entonces se dice que la función es continua.
+                                Por otro lado, cuando es necesario levantar el lápiz para trazar la gráfica de la función, se considera una función discontinua. En ciertos puntos del dominio, la función puede presentar interrupciones en su representación gráfica, lo que indica su discontinuidad.</li>
+
+                                <li class="py-3"><span class="text-green-500 font-bold">Monotonía:</span> Siginifica su crecimiento y decrecimiento. Cuando analizamos el crecimiento de una función, observamos si la función aumenta o disminuye a medida que incrementamos el valor de x de izquierda a derecha. Una pendiente positiva indica un crecimiento, mientras que una pendiente negativa indica un decrecimiento en una función lineal. De manera similar, en una función, un tramo en el que la gráfica sube es un tramo de crecimiento, mientras que un tramo en el que la gráfica baja es un tramo de decrecimiento. Los tramos de crecimiento y decrecimiento se expresan como intervalos abiertos en el eje x. Los máximos y mínimos de una función se definen como absolutos cuando son los valores más altos o más bajos, respectivamente, de toda la función. Los máximos y mínimos que no son los más altos o más bajos se llaman relativos.</li>
+
+                                <li class="py-3"><span class="text-green-500 font-bold">Simetría:</span> Se puede observar fácilmente gráficamente. Matemáticamente, se cumple que f(x) = f(-x), lo que significa que a cada valor positivo de la abscisa (x > 0) le corresponderá el mismo valor de la ordenada (o y) que su valor negativo correspondiente (x &lt; 0). Además, podemos identificar la simetría respecto al origen, donde f(x) = -f(-x). Gráficamente, esto se visualiza como si la función se reflejara en la recta que divide en partes iguales los cuadrantes 2 y 4, convirtiéndose en el eje de simetría. Matemáticamente, esto se traduce en que si para un valor x = 1 la ordenada es y = 1, entonces para el valor opuesto de la abscisa (x = -1), la ordenada también será el opuesto de ese valor (y = -1).</li>
+
+                                <li class="py-3"><span class="text-green-500 font-bold">Periodicidad:</span> Se puede recordar que un fenómeno se considera periódico cuando hay un intervalo constante de tiempo entre cada ocurrencia sucesiva del fenómeno. Este intervalo de tiempo se conoce como período. Existen funciones que exhiben periodicidad, lo que implica que sus valores se repiten a intervalos regulares a lo largo del eje x. El período de una función corresponde a la longitud de ese intervalo en el eje x.</li>
+                                
+                            </ol>
+                
+                            <!--/ Cards-->
+                            <div class="space-y-3">
+                                <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                    <div class="flex items-end justify-end">
+                                        <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Ejemplo 1</p>
+                                    </div>
+                                
+                                    <div class="mt-2">
+                                        <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Función elevar al cuadrado</h2>
+                                        <p class="mt-2 text-gray-600">La regla para elevar al cuadrado un número real está dada por la ecuación f(x) = x<sup>2</sup> o y = x<sup>2</sup>.
+                                        Los valores de f en x =-5 y x =&#8730;7 se obtienen al sustituir x, a la vez, por los números -5 y =&#8730;7.</p>
+                                        <p class="py-4 mt-2 text-gray-600 text-center">f(-5) = (-5)<sup>2</sup> = 25  y  f(&#8730;7) = (&#8730;7)<sup>2</sup> = 7</p>
+                                    </div>
+                                
+                                    <div class="flex items-end justify-end mt-4">
+                                        <p class="font-bold text-gray-700 cursor-pointer">Cálculo Transendentes Tempranas</p>
+                                    </div>
+                                    <div class="flex items-end justify-end mt-0">
+                                        <p class="font-bold text-gray-700 cursor-pointer">Cuarta Edición</p>
+                                    </div>
+                                </div>
+
+                                <div class="max-w-2xl px-8 py-12 bg-white rounded-lg shadow-xl ">
+                                    <div class="flex items-end justify-end">
+                                        <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Ejemplo 2</p>
+                                    </div>
+                                
+                                    <div class="mt-2">
+                                        <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Gráficas de una función</h2>
+                                        <p class="mt-2 text-gray-600">Bosqueje las graficas de: </p>
+
+                                            <ul class="flex flex-wrap items-center justify-center text-gray-600 pt-2">
+                                                <li class="mr-28">(a) f(X) = x<sup>2</sup> - 2</li>
+                                                <li class="mr-4">(B) g(x) = 2/(x - 1)</li>
+                                            </ul>
+
+                                            <div class="flex justify-center pt-8">
+                                            <img src="/imagenes/rango.png" alt="Tabla de funciones">
+                                            </div>
+                                        <p class="py-4 mt-2 text-gray-600">Los dominios naturales de f y g son todos los números reales y todos los números reales excepto el 1, respectivamente. Mediante el procedimiento se realiza una tabla de valores, traza los puntos correspondientes y se conectan por medio de una curva suave, obteniendo las gráficas correspondientes</p>
+
+                                        <div class="flex justify-center pt-8">
+                                            <img src="/imagenes/graficasEjemplo2.png" alt="Tabla de funciones">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="flex items-end justify-end mt-4">
+                                        <p class="font-bold text-gray-700 cursor-pointer">Cálculo Diferencial e Integral</p>
+                                    </div>
+                                    <div class="flex items-end justify-end mt-0">
+                                        <p class="font-bold text-gray-700 cursor-pointer">Novena Edición</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Vídeo explicativo</h2>
+
+                            <div class=" flex justify-center pt-8 class=">
+                                <iframe class="w-full aspect-video"src="https://www.youtube.com/embed/r9jwGansp1E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Problemas propuestos</h2>
+
+                        <p class="py-4 mt-2 text-gray-600">Para el correcto entendimiento del tema explicado anteriormente se recomienda realizar los siguientes ejercicios:</p>
+
+                        <!--/ Cards-->
+                        <div class="space-y-3">
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 1</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Dominio y rango</h2>
+                                    <p class="mt-2 text-gray-600">Determine el dominio y el rango de:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/problema1.png" alt="Tabla de funciones">
+                                    </div>
+                                    
+                                </div>
+                            
+                                <div class="flex items-end justify-end mt-4">
+                                    <p class="font-bold text-gray-700 cursor-pointer">Cálculo Transendentes Tempranas</p>
+                                </div>
+                                <div class="flex items-end justify-end mt-0">
+                                    <p class="font-bold text-gray-700 cursor-pointer">Cuarta Edición</p>
+                                </div>
+                            </div>
+
+                            <div class="max-w-2xl px-8 py-12 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 2</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Dominios de dos funciones</h2>
+                                    <p class="mt-2 text-gray-600">Determine el dominio y bosqueje las siguientes funciones: </p>
+
+                                        <div class="flex justify-center pt-8 pb-4">
+                                        <img src="/imagenes/problema2.png" alt="Tabla de funciones">
+                                        </div>
+                            
+                                <div class="flex items-end justify-end mt-4">
+                                    <p class="font-bold text-gray-700 cursor-pointer">Cálculo Transendentes Tempranas</p>
+                                </div>
+                                <div class="flex items-end justify-end mt-0">
+                                    <p class="font-bold text-gray-700 cursor-pointer">Cuarta Edición</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Bibliografía</h2>
+
+                            <ol>
+                                <li class="py-3"> Stewart, I. (1995). <span class="italic">Concepts of Modern Mathematics.</span> New York: Dover.</li>
+                                
+                                <li class="py-3"> Varberg, D., Purcell, E. J., & Rigdon, S. E. (2006). <span class="italic">Cálculo Diferencial e Integral</span> (Novena ed.). Ciudad de México, México: Pearson.</li>
+
+                                <li class="py-3"> Zill, D. G., & Wright, W. S. (2011). <span class="italic">Cálculo Transendentes Tempranas</span> (Cuarta ed.). Ciudad de México, México: MCGRAW-HILL.</li>
+
+                            </ol>
+
+                        <!--
                         <blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">Example of blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.</blockquote>
             
                         <p class="py-6">Example code block:</p>
@@ -110,7 +265,7 @@
             &lt;/div&gt;
             &lt;/header&gt;
                             </code>
-                        </pre>
+                        </pre>-->
             
             
                         <!--/ Post Content-->
@@ -119,7 +274,7 @@
             
                     <!--Tags -->
                     <div class="text-base md:text-sm text-gray-500 px-4 py-6">
-                        Tags: <a href="#" class="text-base md:text-sm text-green-500 no-underline hover:underline">Link</a> . <a href="#" class="text-base md:text-sm text-green-500 no-underline hover:underline">Link</a>
+                        
                     </div>
             
                     <!--Divider-->
@@ -128,13 +283,13 @@
 
                     <!--Author-->
                     <div class="flex w-full items-center font-sans px-4 py-12">
-                        <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                        <img class="w-10 h-10 rounded-full mr-4" src="/imagenes/jorshua.jpg" alt="Avatar of Author">
                         <div class="flex-1 px-2">
-                            <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Jo Bloggerson</p>
-                            <p class="text-gray-600 text-xs md:text-base">Minimal Blog Tailwind CSS template by <a class="text-green-500 no-underline hover:underline" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+                            <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Jorshua Estrada</p>
+                            <p class="text-gray-600 text-xs md:text-base">Estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación</p>
                         </div>
                         <div class="justify-end">
-                            <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</button>
+                            <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full" onclick="location.href='/integrantes.html'">Leer más</button>
                         </div>
                     </div>
                     <!--/Author-->
@@ -145,12 +300,12 @@
                     <!--Next & Prev Links-->
                     <div class="font-sans flex justify-between content-center px-4 pb-12">
                         <div class="text-left">
-                            <span class="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span><br>
+                            <span class="text-xs md:text-sm font-normal text-gray-600">&lt; Post Anterior</span><br>
                             <p><a href="#" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Blog title</a></p>
                         </div>
                         <div class="text-right">
-                            <span class="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span><br>
-                            <p><a href="#" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Blog title</a></p>
+                            <span class="text-xs md:text-sm font-normal text-gray-600">Siguiente Post &gt;</span><br>
+                            <p><a href="/derivadas.html" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Derivadas</a></p>
                         </div>
                     </div>
             

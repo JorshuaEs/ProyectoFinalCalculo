@@ -11,7 +11,8 @@
                     var title = document.getElementById("title");
                     var inicio = document.getElementById("inicio");
                     var contenido = document.getElementById("contenido");
-                    var contenido2 = document.getElementById("contenido2")
+                    var contenido2 = document.getElementById("contenido2");
+                    var contenido3 = document.getElementById("contenido3")
                     var navcontent = document.getElementById("nav-content");
                     
             
@@ -31,7 +32,8 @@
                             inicio.classList.add("text-white");
                             contenido.classList.add("text-gray-300");
                             contenido2.classList.add("text-gray-300");
-                            navcontent.classList.remove("bg-gray-100");
+                            contenido3.classList.add("text-gray-300");
+                            //navcontent.classList.remove("bg-gray-100");
                             navcontent.classList.add("bg-[#0D4373]");
                         } else {
                             header.classList.remove("bg-[#0D4373]");
@@ -40,8 +42,9 @@
                             inicio.classList.remove("text-white");
                             contenido.classList.remove("text-gray-300");
                             contenido2.classList.remove("text-gray-300");
+                            contenido3.classList.remove("text-gray-300");
                             navcontent.classList.remove("bg-[#0D4373]");
-                            navcontent.classList.add("bg-gray-100");
+                            //navcontent.classList.add("bg-gray-100");
             
                         }
             

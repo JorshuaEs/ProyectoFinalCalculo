@@ -1,99 +1,442 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
 
     <head>    
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>Barbería Alura</title>
+        <title>Proyecto Calculo I</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
     </head>
 
     <body>
-
-        <header>
-            <div class="caja">
-                <h1><img class="img_header" src="imagenes/umgimg.png"></h1>
-                <nav>
-                     <ul class="navegacion">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="funciones.html">Funciones</a></li>
-                        <li><a href="derivadas.html">Derivadas</a></li>
-                     </ul>
+        <main>
+            <header>
+            
+                <nav id="header" class="fixed w-full z-10 top-0 ">
+                    <div class="max-[1100px]:hidden">
+                    <img class="absolute h-4/5  pl-10 mt-2 " src="imagenes/umgimg.png">
+                    </div>
+                    <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+            
+                    <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+            
+                        <div >
+                            <a id="title" class=" text-black text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="index.html">
+                                PROYECTO CÁLCULO I
+                            </a>
+                        </div>
+            
+                        <div class="block lg:hidden pr-4">
+                            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+                                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Menu</title>
+                                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                                </svg>
+                            </button>
+                        </div>
+            
+                        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  md:bg-transparent z-20" id="nav-content">
+                            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                                <li >
+                                    <a id="inicio"class="inline-block py-2 px-2 text-gray-900 font-bold no-underline" href="index.html">Inicio</a>
+                                </li>
+                                <li>
+                                    <a id="contenido"class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-2" href="funciones.html">FUNCIONES</a>
+                                </li>
+                                <li>
+                                    <a id="contenido2" class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-2" href="derivadas.html">DERIVADAS</a>
+                                </li>
+                                <li >
+                                    <a id="contenido3" class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2" href="integrantes.html">INTEGRANTES</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
-            </div>
-         </header>
-         <main>
-            <form>
-                <label for="nombreapellido">Nombre y Apellido</label>
-                <input type="text" id="nombreapellido" class="input-padron" required>
+            </header>
+            <body class="font-sans leading-normal tracking-normal">
 
-                <label for="correoelectronico">Correo Electrónico </label>
-                <input type="email" id="correoelectronico" class="input-padron" required
-                placeholder="email@dominio.com">
+                <!--Container-->
+                <div class="container w-full md:max-w-3xl mx-auto pt-20">
+            
+                    <div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+            
+                        <!--Title-->
+                        <div class="font-sans">
+                            <p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="index.html" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO INICIO</a></p>
+                                    <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Derivadas</h1>
+                                    <p class="text-sm md:text-base font-normal text-gray-600">Publicado 24 Mayo 2023</p>
+                        </div>
+            
+            
+                        <!--Post Content-->
+                        <p class="py-6">    
+                        Se utiliza en matemática para el cálculo de respuestas de una función a la que se le están alternando sus valores iniciales, el cual está representada gráficamente como una línea recta  superpuesta sobre otra curva (función) y el valor de esta pendiente respecto al eje sobre el cual está siendo evaluada la función recibe el nombre de derivada.
+                        </p>
 
-                <label for="telefono">Teléfono</label class="input-padron">
-                <input type="tel" id="telefono" class="input-padron" required
-                placeholder="(xxx) xxxx xxxx">
+                        <div class="flex justify-center">
+                        <img class=" w-1/2" src="/imagenes/derivadas.webp" alt="Diagrama de una función">
+                        </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-2xl md:text-3xl">Derivada de una función utilizando la forma </h2>
 
-                <fieldset>
-                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                        <p class="py-6">
+                            La función f es la función f&#8217; definida por:
+                        </p>
+            
+            
+                        <div class="flex justify-center">
+                            <img class="mr-12"src="/imagenes/derivadaforma.png" alt="Formula derivada de forma">
+                            </div>
+            
+                        <p class="py-6 pb-8">En esta expresión, h representa un valor pequeño que tiende a cero. La fórmula evalúa la diferencia de los valores de la función f(x) cuando se toma un punto ligeramente desplazado a la derecha (x + h) y se resta el valor de la función en el punto original (x). Luego, esta diferencia se divide por el tamaño del desplazamiento (h). A medida que h se acerca a cero, la fórmula proporciona una aproximación de la tasa de cambio instantánea de la función f(x) en el punto x. 
+                        </p> 
+
+                        
+
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Vídeo explicativo</h2>
+
+                            <div class=" flex justify-center pt-8 class=">
+                                <iframe class="w-full aspect-video"src="https://www.youtube.com/embed/6nKB7TEfUUM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Problemas propuestos</h2>
+
+                        <p class="py-4 mt-2 text-gray-600">Para el correcto entendimiento del tema explicado anteriormente se recomienda realizar los siguientes ejercicios:</p>
+
+                        <div class="space-y-3">
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 1</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Forma</h2>
+                                    <p class="mt-2 text-gray-600">Derivar de forma:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img class="h-4"src="/imagenes/ejemploforma.png" alt="Ejercicio derivada">
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-700 hover:text-gray-600 hover:underline">Solución</h3>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img class="h-6"src="/imagenes/solucionEjemploForma.png" alt="Ejercicio derivada">
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 2</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Forma</h2>
+                                    <p class="mt-2 text-gray-600">Derivar de forma:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img class="h-4"src="/imagenes/ejemploforma2.png" alt="Ejercicio derivada">
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-700 hover:text-gray-600 hover:underline">Solución</h3>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img class="h-6"src="/imagenes/solucionEjemploForma2.png" alt="Ejercicio derivada">
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+                        </div>
+                        
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-2xl md:text-3xl">Derivada de una función utilizando regla de la cadena</h2>
+
+                        <p class="py-6">
+                            La regla de la cadena es una norma de la derivación que nos dice que, teniendo una variable y que depende de u, y si esta depende a la variable x, entonces la razón de cambio de y respecto a x puede estimarse como el producto de la derivada de y con respecto a u por la derivada de u respecto a X.
+                        </p>
+
+                        <ol>
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de una constante:</span> La derivada de una constante es cerro.
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img class="h-6"src="/imagenes/derivadaconstante.png" alt="Ejemplo derivada constante">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de X:</span> La derivada de x es igual a 1. Es decir, la derivada de la función identidad es igual a la unidad.
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img class="h-6"src="/imagenes/derivadax.png" alt="Ejemplo derivada de X">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de una potencia:</span> La derivada de una potencia o función potencial, es igual al exponente por la pase elevada al exponente menos uno y por la derivada de la base.
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img class="h-6"src="/imagenes/derivadapotencia.jpg" alt="Ejemplo derivada de potencia">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de una raíz:</span> La derivada de la raíz enésima de una función es igual a la derivada del radicando partida por la n veces la raíz enésima de la función radicando elevada a n menos uno.
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadaraiz.png" alt="Ejemplo derivada con raiz">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de la raíz cuadrada:</span> La derivada de la raíz cuadrada de una función es igual a la derivada del radicando partida por el duplo de la raíz.
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadaraizcuadrada.png" alt="Ejemplo derivada con raiz cuadrada">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de una suma:</span> La derivada de una suma de dos funciones es igual a la suma de las derivadas de dichas funciones.
+                            Esta regla se extiende a cualquier número de sumandos, ya sean positivos o negativos.
+                                
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadasuma.png" alt="Ejemplo derivada de suma">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada del producto:</span> La derivada del producto de dos funciones es igual al primer factor por la derivada del segundo más el segundo factor por la derivada del primero.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadaproducto.png" alt="Ejemplo derivada de producto">
+                                </div>
+                            </li>
+                            
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de un cociente:</span> La derivada del cociente de dos funciones es igual a la derivada del numerador por el denominador menos la derivada del denominador por el numerador, divididas por el cuadrado del denominador.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadacociente.png" alt="Ejemplo derivada de cociente">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de una función seno:</span> La derivada de una función seno de una función es igual al coseno de la función por la derivada de la función.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadaseno.png" alt="Ejemplo derivada de seno">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de una función coseno:</span> La derivada del coseno de una función es igual a menos el seno de la función por la derivada de la función.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadacoseno.png" alt="Ejemplo derivada de coseno">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de la función tangente:</span> La derivada de la función tangente es igual al cuadrado de la secante de la función por la derivada de la función.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadatangente.png" alt="Ejemplo derivada tangente">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de la función contangete:</span> La derivada de la función cotangente es igual a menos el cuadrado de la cosecante de la función por la derivada de la función.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadacotangente.png" alt="Ejemplo derivada cotangente">
+                                </div>
+                            </li>
+
+                            <li class="py-3"><span class="text-green-500 font-bold">Derivada de la función cosecante:</span> La derivada de la cosecante de una función es igual a menos la cosecante de la función por la cotangente de la función, y por la derivada de la función.
+                                    
+                                <div class="flex justify-center pt-2 pb-4">
+                                    <img src="/imagenes/derivadacosecante.png" alt="Ejemplo derivada cosecante">
+                                </div>
+                            </li>
+
+                        </ol>
+
+                        <div class="space-y-3">
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Ejemplo 1</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Regla de la cadena</h2>
+                                    <p class="mt-2 text-gray-600">Derivar con regla de la cadena:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/ejemploregla.png" alt="Ejercicio derivada">
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-700 hover:text-gray-600 hover:underline">Solución</h3>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/solucionejemploregla.png" alt="Ejercicio derivada">
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Vídeo explicativo</h2>
+
+                            <div class=" flex justify-center pt-8 class=">
+                                <iframe class="w-full aspect-video"src="https://www.youtube.com/embed/cZiZ5S2bhtc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                        <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-2xl">Problemas propuestos</h2>
+
+                        <p class="py-4 mt-2 text-gray-600">Para el correcto entendimiento del tema explicado anteriormente se recomienda realizar los siguientes ejercicios:</p>
+
+                        <div class="space-y-3">
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 1</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Regla de la cadena</h2>
+                                    <p class="mt-2 text-gray-600">Derivar con regla de la cadena:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/problema1cadena.png" alt="Ejercicio derivada">
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-700 hover:text-gray-600 hover:underline">Solución</h3>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/solucionproblema1cadena.png" alt="Solución derivada">
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 2</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Regla de la cadena</h2>
+                                    <p class="mt-2 text-gray-600">Derivar con regla de la cadena:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/problema2cadena.png" alt="Ejercicio derivada">
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-700 hover:text-gray-600 hover:underline">Solución</h3>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/solucionproblema2cadena.png" alt="Solución derivada">
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+
+                            <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-xl ">
+                                <div class="flex items-end justify-end">
+                                    <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Problema 3</p>
+                                </div>
+                            
+                                <div class="mt-2">
+                                    <h2 class="text-xl font-bold text-gray-700 hover:text-gray-600 hover:underline">Regla de la cadena</h2>
+                                    <p class="mt-2 text-gray-600">Derivar con regla de la cadena:</p>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/problema3cadena.png" alt="Ejercicio derivada">
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-700 hover:text-gray-600 hover:underline">Solución</h3>
+                                    <div class="flex justify-center pt-2 pb-4">
+                                        <img src="/imagenes/solucionproblema3cadena.png" alt="Solución derivada">
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+
+                        </div>
+
+                        <ol class="mt-12">
+                            <li class="py-3"> Stewart, I. (1995). <span class="italic">Concepts of Modern Mathematics.</span> New York: Dover.</li>
+                            
+                            <li class="py-3"> Varberg, D., Purcell, E. J., & Rigdon, S. E. (2006). <span class="italic">Cálculo Diferencial e Integral</span> (Novena ed.). Ciudad de México, México: Pearson.</li>
+
+                            <li class="py-3"><span class="italic">derivadas</span> - Diccionario de Matemáticas. (s/f). Diccionario de Matemáticas | Superprof. Recuperado el 24 de mayo de 2023, de https://www.superprof.es/diccionario/matematicas/calculo/derivadas.html</li>
+
+                        </ol>
+
+                        <!------------------------------------------------------------------------------------------>
+                        <!------------------------------------------------------------------------------------------>
+                        <!------------------------------------------------------------------------------------------>
+                        <!------------------------------------------------------------------------------------------>
+                        
+            
+                    <!--Tags -->
+                    <div class="text-base md:text-sm text-gray-500 px-4 py-6">
+                        
+                    </div>
+            
+                    <!--Divider-->
+                    <hr class="border-b-2 border-gray-400 mb-8 mx-4">
+            
+
+                    <!--Author-->
                     
-                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
-
-                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>                   
-
-                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>                   
-                </fieldset>
-
-                <fieldset>
-                    <legend>¿En cuál horario prefiere ser atendido?</legend>
-                    <select>
-                        <option>Mañana</option>
-                        <option>Tarde</option>
-                        <option>Noche</option>
-                    </select>
-                </fieldset>
+                    <div class="flex w-full items-center font-sans px-4 py-4">
+                        <img class="w-10 h-10 rounded-full mr-4" src="/imagenes/bryan.jpg" alt="Avatar of Author">
+                        <div class="flex-1 px-2">
+                            <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Bryan Esquipulas </p>
+                            <p class="text-gray-600 text-xs md:text-base">Estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación</p>
+                        </div>
+                        <div class="justify-end">
+                            <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full" onclick="location.href='/integrantes.html'">Leer más</button>
+                        </div>
+                    </div>
+                    <div class="flex w-full items-center font-sans px-4 py-12">
+                        <img class="w-10 h-10 rounded-full mr-4" src="/imagenes/jonatan.jpg" alt="Avatar of Author">
+                        <div class="flex-1 px-2">
+                            <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Jonatan Cante</p>
+                            <p class="text-gray-600 text-xs md:text-base">Estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación</p>
+                        </div>
+                        <div class="justify-end">
+                            <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full" onclick="location.href='/integrantes.html'">Leer más</button>
+                        </div>
+                    </div>
+                    <!--/Author-->
+            
+                    <!--Divider-->
+                    <hr class="border-b-2 border-gray-400 mb-8 mx-4">
+            
+                    <!--Next & Prev Links-->
+                    <div class="font-sans flex justify-between content-center px-4 pb-12">
+                        <div class="text-left">
+                            <span class="text-xs md:text-sm font-normal text-gray-600">&lt; Post Anterior</span><br>
+                            <p><a href="/funciones.html" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Funciones</a></p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs md:text-sm font-normal text-gray-600">Siguiente Post &gt;</span><br>
+                            
+                        </div>
+                    </div>
+            
+            
+                    <!--/Next & Prev Links-->
+            
+                </div>
                 
-                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+            </body>
+            
 
-                <input type="submit" value="Enviar formulario" class="enviar">
-            </form>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Día</th>
-                        <th>Horario</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lunes</td>
-                        <td>08h ~ 20h</td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>08h ~ 20h</td>
-                    </tr>
-                    <tr>
-                        <td>Viernes</td>
-                        <td>08h ~ 20h</td>
-                    </tr>
-                </tbody>
-            </table>
         </main>
-         <footer>
-            <img src="imagenes/logo-blanco.png" alt="Logo de Barbería Alura">
-            <p class="copyright">&copy Copyright Barbería Alura - 2020</p>
-         </footer>
+        
+        <footer class="bg-white dark:bg-[#0D4373]">
+            <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
+                <a href="#">
+                    <img class="w-20 h-10 ml-10" src="imagenes/funcionblanco.png" alt="">
+                </a>
+        
+                <p class="text-sm text-gray-600 dark:text-gray-300">© Copyright 2023. All Rights Reserved.</p>
+        
+                <div class="flex -mx-2">
+        
+                    <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Github">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/complements.js"></script>
     </body>
 </html>
